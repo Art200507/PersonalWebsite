@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Badgujar - Full Stack Developer & Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">AB</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-container"></div>
+
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Atharva</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="100">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="wave">👋</div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Atharva</span>
+                        <span class="title-line gradient-text">Badgujar</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="static-text">I'm a </span>
+                        <span class="dynamic-text" id="typewriter"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate Full Stack Developer and Data Scientist with expertise in modern web technologies,
+                        machine learning, and leadership. I create innovative solutions that bridge technology and user experience.
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>View My Work</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="/resume.pdf" class="btn btn-outline" download>
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="1000">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <img src="ProfilePic.jpeg" alt="Atharva Badgujar" class="profile-image">
+                        <div class="profile-ring"></div>
+                    </div>
+                    <div class="floating-icons">
+                        <div class="icon-item" style="--delay: 0s;"><i class="fab fa-react"></i></div>
+                        <div class="icon-item" style="--delay: 0.5s;"><i class="fab fa-python"></i></div>
+                        <div class="icon-item" style="--delay: 1s;"><i class="fab fa-js-square"></i></div>
+                        <div class="icon-item" style="--delay: 1.5s;"><i class="fas fa-database"></i></div>
+                        <div class="icon-item" style="--delay: 2s;"><i class="fab fa-node-js"></i></div>
+                        <div class="icon-item" style="--delay: 2.5s;"><i class="fas fa-brain"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Discover my journey, passion, and expertise</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="text-card">
+                        <p>I'm a dedicated Full Stack Developer and Data Scientist currently pursuing my Bachelor's in Computer Science at University at Buffalo. My journey in technology has been driven by curiosity and a passion for creating impactful solutions.</p>
+
+                        <p>With extensive experience in modern web development frameworks like React, Node.js, and cutting-edge data science tools including Python, TensorFlow, and scikit-learn, I bridge the gap between complex data insights and user-friendly applications.</p>
+
+                        <p>Beyond technical skills, I've demonstrated strong leadership through various roles, from founding tech initiatives to mentoring fellow students. I believe in the power of technology to solve real-world problems and create meaningful experiences.</p>
+
+                        <div class="achievements-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>University at Buffalo - Computer Science</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Leadership</h4>
+                                    <p>6+ Years of Team Leadership</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <h4>Projects</h4>
+                                    <p>15+ Successful Implementations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="skills-radar">
+                        <div class="radar-chart">
+                            <canvas id="skillsChart" width="300" height="300"></canvas>
+                            <div class="skill-labels">
+                                <div class="skill-label" data-skill="Frontend">Frontend</div>
+                                <div class="skill-label" data-skill="Backend">Backend</div>
+                                <div class="skill-label" data-skill="Data Science">Data Science</div>
+                                <div class="skill-label" data-skill="Mobile">Mobile</div>
+                                <div class="skill-label" data-skill="DevOps">DevOps</div>
+                                <div class="skill-label" data-skill="ML/AI">ML/AI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey and achievements</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <div class="marker-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="job-info">
+                                        <h3 class="job-title">Data Analyst Intern</h3>
+                                        <p class="company">School of Engineering and Applied Sciences</p>
+                                        <span class="duration">May 2025 - Sep 2025</span>
+                                    </div>
+                                    <div class="job-badge">Current</div>
+                                </div>
+                                <p class="job-description">
+                                    Utilized Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL to clean, process, and analyze datasets with 1M+ records, uncovering actionable trends for institutional and pedagogical strategies.
+                                </p>
+                                <div class="achievements">
+                                    <h4>Key Achievements</h4>
+                                    <ul>
+                                        <li>Analyzed datasets with 1M+ records using Python and SQL</li>
+                                        <li>Designed and automated workflow mechanisms, reducing analysis time by 70%</li>
+                                        <li>Applied AI and ML techniques (predictive modeling, clustering) to identify KPIs</li>
+                                        <li>Developed clear data visualizations for technical and non-technical stakeholders</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                    <span class="tech-tag">Data Visualization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <div class="marker-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="job-info">
+                                        <h3 class="job-title">Teaching Assistant</h3>
+                                        <p class="company">School of Engineering and Applied Sciences</p>
+                                        <span class="duration">Sep 2024 - Present</span>
+                                    </div>
+                                    <div class="job-badge">Education</div>
+                                </div>
+                                <p class="job-description">
+                                    Facilitated student engagement and learning during lab sessions and lectures. Provided timely grading and constructive feedback to enhance student performance.
+                                </p>
+                                <div class="achievements">
+                                    <h4>Key Responsibilities</h4>
+                                    <ul>
+                                        <li>Facilitated student engagement during lab sessions and lectures</li>
+                                        <li>Provided timely grading and constructive feedback</li>
+                                        <li>Collaborated with instructional team for inclusive learning environment</li>
+                                        <li>Assisted with administrative duties for smooth lab execution</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Teaching</span>
+                                    <span class="tech-tag">Grading</span>
+                                    <span class="tech-tag">Communication</span>
+                                    <span class="tech-tag">Administration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="timeline-marker">
+                            <div class="marker-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="job-info">
+                                        <h3 class="job-title">Research Assistant</h3>
+                                        <p class="company">Dr. Matilde Sanchez-Peña Research Lab</p>
+                                        <span class="duration">Jan 2025 - May 2025</span>
+                                    </div>
+                                    <div class="job-badge">Research</div>
+                                </div>
+                                <p class="job-description">
+                                    Applied CS and data science principles to support studies on diversity and education in engineering. Worked with large-scale datasets to extract, clean, analyze, and visualize information.
+                                </p>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">Seaborn</span>
+                                    <span class="tech-tag">scikit-learn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Leadership</h2>
+                <p class="section-subtitle">Driving innovation and inspiring teams</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leadership-card" data-aos="fade-up">
+                    <div class="card-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Vice President of Membership</h3>
+                        <p class="organization">National Residence Hall Honorary</p>
+                        <p class="duration">May 2024 - Present</p>
+                        <p class="description">
+                            Executive Board Member responsible for recruiting and onboarding new members, organizing membership events, and managing membership database and engagement tracking.
+                        </p>
+                        <div class="impact-metrics">
+                            <div class="metric">
+                                <span class="number">50+</span>
+                                <span class="label">Members Recruited</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">15+</span>
+                                <span class="label">Events Organized</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leadership-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Peer Mentor</h3>
+                        <p class="organization">Office of Student Engagement</p>
+                        <p class="duration">Apr 2024 - Jun 2025</p>
+                        <p class="description">
+                            Assisted with development, coordination, promotion, and implementation of leadership, community engagement, and student professional development programs.
+                        </p>
+                        <div class="impact-metrics">
+                            <div class="metric">
+                                <span class="number">100+</span>
+                                <span class="label">Students Mentored</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">20+</span>
+                                <span class="label">Programs Led</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leadership-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Student Integrity Ambassador</h3>
+                        <p class="organization">Office of Academic Integrity</p>
+                        <p class="duration">May 2024 - Jun 2025</p>
+                        <p class="description">
+                            Help students and staff uphold academic integrity through presentations, workshops, mentorship, and study support programs.
+                        </p>
+                        <div class="impact-metrics">
+                            <div class="metric">
+                                <span class="number">200+</span>
+                                <span class="label">Students Reached</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">25+</span>
+                                <span class="label">Workshops Conducted</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions that make a difference</p>
+            </div>
+            <div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="ai fullstack" data-aos="zoom-in">
+                    <div class="project-image">
+                        <img src="Crius07.png" alt="Cirus07">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Cirus07 - AI Web Assistant</h3>
+                            <span class="project-type">AI/ML</span>
+                        </div>
+                        <p class="project-description">
+                            Chrome extension with Google Gemini 2.0 Flash API integration, featuring real-time DOM scanning, contextual guidance, and full-stack companion platform with analytics dashboards.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chrome API</span>
+                            <span class="tech-tag">Google Gemini API</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9/5 Rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>2K+ Users</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="TheMiddleMan.png" alt="TheMiddleMan">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">TheMiddleMan - Escrow Platform</h3>
+                            <span class="project-type">Full Stack</span>
+                        </div>
+                        <p class="project-description">
+                            Full-stack escrow platform using Next.js, React, Firebase, and Stripe with AI-powered fraud detection, automated payment holds, and real-time transaction monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">TailwindCSS</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>99.9% Secure</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-bolt"></i>
+                                <span>Real-time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai fullstack" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="BonVoyage.png" alt="Bon Voyage">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Bon Voyage - AI Travel Planner</h3>
+                            <span class="project-type">AI Travel</span>
+                        </div>
+                        <p class="project-description">
+                            Travel itinerary generator using React and Google Gemini API with personalized trip plans, hotel recommendations, and Google Maps integration with Firebase authentication.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Google Gemini API</span>
+                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">TailwindCSS</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>100+ Cities</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile First</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai fullstack" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="MindMirror.png" alt="MindMirror">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://mind-mirror-c6fm.vercel.app/computer-vision/mood-music/mood-music-standalone.html" class="project-link" data-tooltip="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">MindMirror AI - Emotion Analysis</h3>
+                            <span class="project-type">AI/ML</span>
+                        </div>
+                        <p class="project-description">
+                            Built a real-time emotion-aware web app using WebRTC, MorphCast SDK, and Gemini API to analyze facial expressions and provide adaptive psychological support with physiological guidance and encouragement.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">MorphCast SDK</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-brain"></i>
+                                <span>Real-time AI</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-universal-access"></i>
+                                <span>Accessible UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="datascience" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="project-image">
+                        <img src="SchemaMorph.png" alt="SchemaMorph">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">SchemaMorph - Data Platform</h3>
+                            <span class="project-type">Data Science</span>
+                        </div>
+                        <p class="project-description">
+                            Python-based web platform with dynamic rule builder and regex templates for complex data transformations, reducing preprocessing time by 60%.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Regex</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-database"></i>
+                                <span>Multi-DB</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>60% Faster</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React/Next.js</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript/TypeScript</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5/CSS3</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js/Express</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python/Django</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL/NoSQL</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <div class="category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Data Science & AI</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TensorFlow/PyTorch</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Analysis</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                        <div class="category-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud & DevOps</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS/Firebase</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker/Git</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CI/CD</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Email</h3>
+                            <p>abadguja@buffalo.edu</p>
+                            <a href="mailto:abadguja@buffalo.edu" class="contact-link">Send Message</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me professionally</p>
+                            <a href="https://www.linkedin.com/in/atharva-badgujar-80ab8920b/?trk=opento_sprofile_pfeditor" class="contact-link">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>GitHub</h3>
+                            <p>Check out my code</p>
+                            <a href="https://github.com/Art200507" class="contact-link">View Repositories</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-up" data-aos-delay="600">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Atharva Badgujar. Crafted with passion and precision.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/atharva-badgujar-80ab8920b/?trk=opento_sprofile_pfeditor" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Art200507" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        // TODO: Replace with your Firebase config
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Make db available globally
+        window.firestoreDB = db;
+        window.firestoreCollection = collection;
+        window.firestoreAddDoc = addDoc;
+        window.firestoreTimestamp = serverTimestamp;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

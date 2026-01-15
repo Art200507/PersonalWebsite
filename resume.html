@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Badgujar - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #0066ff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #0066ff;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 10pt;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #0066ff;
+            border-bottom: 2px solid #0066ff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #333;
+        }
+        
+        .company {
+            font-weight: bold;
+            color: #0066ff;
+        }
+        
+        .duration {
+            color: #666;
+            font-size: 10pt;
+        }
+        
+        .experience-description {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        .key-responsibilities {
+            margin-bottom: 10px;
+        }
+        
+        .key-responsibilities h4 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .key-responsibilities ul {
+            margin-left: 20px;
+        }
+        
+        .key-responsibilities li {
+            margin-bottom: 3px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            background: #f0f8ff;
+            border: 1px solid #0066ff;
+            color: #0066ff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+            font-weight: 500;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fafafa;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #0066ff;
+            margin-bottom: 8px;
+            font-size: 12pt;
+        }
+        
+        .project-description {
+            margin-bottom: 10px;
+            font-size: 10pt;
+            text-align: justify;
+        }
+        
+        .project-tech {
+            margin-bottom: 10px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-link {
+            color: #0066ff;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .skill-category h3 {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 11pt;
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+        }
+        
+        .skill-level {
+            width: 60px;
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: #0066ff;
+            border-radius: 4px;
+        }
+        
+        .about-text {
+            text-align: justify;
+            margin-bottom: 20px;
+            font-size: 11pt;
+        }
+        
+        .about-stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #0066ff;
+        }
+        
+        .stat-label {
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                font-size: 10pt;
+            }
+            
+            .container {
+                padding: 0.25in;
+            }
+            
+            .section {
+                margin-bottom: 20px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Atharva Badgujar</div>
+            <div class="title">Computer Science Student & Research Assistant</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>abadguja@buffalo.edu</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Buffalo, NY</span>
+                </div>
+                <div class="contact-item">
+                    <span>🏫</span>
+                    <span>University at Buffalo</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>linkedin.com/in/atharva-badgujar-80ab8920b</span>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <span>github.com/Art200507</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <div class="section-title">About Me</div>
+            <div class="about-text">
+                I'm a Computer Science major at University at Buffalo with a passion for data science, 
+                machine learning, and creating positive social impact through technology. My work as a 
+                Research Assistant allows me to combine technical skills with a commitment to equity and 
+                inclusion in STEM fields.
+            </div>
+            <div class="about-text">
+                I specialize in working with large-scale datasets, performing statistical analysis, 
+                and developing machine learning insights that inform educational strategies and institutional 
+                policies. My goal is to leverage technology to create more inclusive and accessible 
+                learning environments.
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Years Leadership</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Programming Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            
+            <!-- Data Analyst Intern -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Data Analyst Intern</div>
+                        <div class="company">School of Engineering and Applied Sciences</div>
+                    </div>
+                    <div class="duration">May 2025 - Sep 2025</div>
+                </div>
+                <div class="experience-description">
+                    Utilized Python (Pandas, NumPy, Matplotlib, Seaborn) and SQL to clean, process, and analyze datasets with 1M+ records,
+                    uncovering actionable trends for institutional and pedagogical strategies.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Analyzed datasets with 1M+ records using Python and SQL</li>
+                        <li>Designed and automated workflow mechanisms that reduced analysis time by 70%</li>
+                        <li>Applied AI and ML techniques (predictive modeling, clustering) to identify key performance indicators</li>
+                        <li>Developed clear data visualizations and reports for technical and non-technical stakeholders</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Data Visualization</span>
+                </div>
+            </div>
+
+            <!-- Teaching Assistant -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Teaching Assistant</div>
+                        <div class="company">School of Engineering and Applied Sciences</div>
+                    </div>
+                    <div class="duration">Sep 2024 - Present</div>
+                </div>
+                <div class="experience-description">
+                    Facilitated student engagement and learning during lab sessions and lectures. Provided timely grading
+                    and constructive feedback to enhance student performance.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Responsibilities:</h4>
+                    <ul>
+                        <li>Facilitated student engagement during lab sessions and lectures</li>
+                        <li>Provided timely grading and constructive feedback</li>
+                        <li>Collaborated with instructional team for inclusive learning environment</li>
+                        <li>Assisted with administrative duties for smooth lab execution</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Teaching</span>
+                    <span class="tech-tag">Grading</span>
+                    <span class="tech-tag">Written Communication</span>
+                    <span class="tech-tag">Administrative Assistance</span>
+                </div>
+            </div>
+
+            <!-- Research Assistant -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Research Assistant</div>
+                        <div class="company">Dr. Matilde Sanchez-Peña Research Lab</div>
+                    </div>
+                    <div class="duration">Jan 2025 - May 2025</div>
+                </div>
+                <div class="experience-description">
+                    Applied CS and data science principles to support impactful studies on diversity and education in engineering.
+                    Worked with large-scale datasets to extract, clean, analyze, and visualize information.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Responsibilities:</h4>
+                    <ul>
+                        <li>Data extraction from surveys, databases, and educational platforms</li>
+                        <li>Data cleaning and manipulation for meaningful analysis</li>
+                        <li>Statistical analysis and visualization of engineering education trends</li>
+                        <li>Machine learning insights into evolving engineering skillsets</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">Seaborn</span>
+                    <span class="tech-tag">scikit-learn</span>
+                </div>
+            </div>
+
+            <!-- Tutor -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Tutor</div>
+                        <div class="company">Tutoring and Academic Support Services (TASS)</div>
+                    </div>
+                    <div class="duration">Jan 2024 - May 2024</div>
+                </div>
+                <div class="experience-description">
+                    Provided academic tutoring for MTH 141, MTH 114, MTH 108, and CSE 115. Offered Academic Coaching
+                    to support students in achieving their educational goals.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Tutoring</span>
+                    <span class="tech-tag">Communication</span>
+                    <span class="tech-tag">People Management</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership Section -->
+        <div class="section">
+            <div class="section-title">Leadership Experience</div>
+
+            <!-- Vice President of Membership -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Vice President of Membership</div>
+                        <div class="company">National Residence Hall Honorary</div>
+                    </div>
+                    <div class="duration">May 2024 - Present</div>
+                </div>
+                <div class="experience-description">
+                    Executive Board Member responsible for recruiting and onboarding new members, organizing membership events,
+                    and managing membership database and engagement tracking.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Responsibilities:</h4>
+                    <ul>
+                        <li>Recruiting and onboarding new members to the organization</li>
+                        <li>Organizing and hosting membership events and activities</li>
+                        <li>Collaborating with student organizations to promote NRHH initiatives</li>
+                        <li>Managing membership database and tracking engagement</li>
+                        <li>Representing NRHH in the broader residential life community</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Leadership</span>
+                    <span class="tech-tag">Recruiting</span>
+                    <span class="tech-tag">Organization Skills</span>
+                    <span class="tech-tag">Event Planning</span>
+                </div>
+            </div>
+
+            <!-- Peer Mentor -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Peer Mentor</div>
+                        <div class="company">Office of Student Engagement</div>
+                    </div>
+                    <div class="duration">Apr 2024 - Jun 2025</div>
+                </div>
+                <div class="experience-description">
+                    Assisted with development, coordination, promotion, and implementation of leadership, community engagement,
+                    and student professional development programs.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Student Engagement</span>
+                    <span class="tech-tag">Leadership</span>
+                    <span class="tech-tag">Communication</span>
+                    <span class="tech-tag">Program Development</span>
+                </div>
+            </div>
+
+            <!-- Student Integrity Ambassador -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Student Integrity Ambassador</div>
+                        <div class="company">Office of Academic Integrity</div>
+                    </div>
+                    <div class="duration">May 2024 - Jun 2025</div>
+                </div>
+                <div class="experience-description">
+                    Help students and staff uphold academic integrity on campus through presentations, workshops, mentorship,
+                    and study support programs.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Responsibilities:</h4>
+                    <ul>
+                        <li>Offer academic integrity presentations at seminars</li>
+                        <li>Provide workshops on time management and study skills</li>
+                        <li>Mentor peers needing support with academic integrity</li>
+                        <li>Host study nights during exam periods</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Public Speaking</span>
+                    <span class="tech-tag">Presentation Skills</span>
+                    <span class="tech-tag">Mentoring</span>
+                    <span class="tech-tag">Workshop Facilitation</span>
+                </div>
+            </div>
+
+            <!-- Coordinator of Communications -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Coordinator of Communications</div>
+                        <div class="company">Residence Hall Association</div>
+                    </div>
+                    <div class="duration">Sep 2023 - May 2024</div>
+                </div>
+                <div class="experience-description">
+                    Orchestrated and executed highly successful events, drawing substantial attendance and boosting community participation.
+                    Leveraged effective communication strategies to enhance student engagement.
+                </div>
+                <div class="key-responsibilities">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Orchestrated highly successful events with substantial attendance</li>
+                        <li>Participated in RHA meetings, contributing valuable insights</li>
+                        <li>Enhanced student engagement through effective communication strategies</li>
+                        <li>Fostered vibrant and inclusive residential community</li>
+                    </ul>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Event Planning</span>
+                    <span class="tech-tag">Communication</span>
+                    <span class="tech-tag">Community Building</span>
+                    <span class="tech-tag">Team Building</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <div class="section-title">Featured Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">Cirus07 – AI-Powered Web Assistant</div>
+                    <div class="project-description">
+                        Engineered a multi-component Chrome extension (Manifest V3) using JavaScript, HTML5, and CSS3, implementing service workers,
+                        content scripts, real-time DOM scanning, element highlighting, and adaptive floating UI.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Chrome API</span>
+                        <span class="tech-tag">Google Gemini API</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">TheMiddleMan – Secure Escrow Platform</div>
+                    <div class="project-description">
+                        Built a full-stack escrow platform using Next.js, React, Firebase, and Stripe, enabling safe digital product transactions
+                        with AI-powered fraud detection and automated 24-hour payment holds.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Bon Voyage – AI-Powered Travel Planner</div>
+                    <div class="project-description">
+                        Built a travel itinerary generator using React and Google Gemini API, delivering personalized trip plans
+                        with hotel recommendations and day-by-day schedules tailored to user preferences.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Google Gemini API</span>
+                        <span class="tech-tag">Google Maps API</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">SchemaMorph – Data Sorting Platform</div>
+                    <div class="project-description">
+                        Built a Python-based web platform (Flask, Pandas, NumPy, Regex) that allows users to upload datasets
+                        and apply custom constraints for sorting, filtering, and restructuring unorganized data.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Regex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">OCaml</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-items">
+                        <span class="tech-tag">SQL (MySQL, PostgreSQL)</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Predictive Modeling</span>
+                        <span class="tech-tag">Clustering</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Full Stack Development</h3>
+                    <div class="skill-items">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Authentication</span>
+                        <span class="tech-tag">Deployment</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-items">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Git/GitHub</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Jupyter Notebook</span>
+                        <span class="tech-tag">MS Office Suite</span>
+                        <span class="tech-tag">Workflow Automation</span>
+                        <span class="tech-tag">Agile</span>
+                        <span class="tech-tag">Netlify</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
